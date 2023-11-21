@@ -15,7 +15,7 @@ Big O notation is a way to describe the efficiency or complexity of an algorithm
 - Big-Omega (Ω) Notation reveals the best-case run time (asymptotic lower bound of an algorithm).
 - Big-Theta (ϴ) Notation encapsulates the extremes and provides a tight and consistent range (average). But, is confined to matching time complexities.
 
-![Alt text](image.png)
+![Alt text](Photo/image-10.png)
 
 The following chart is a comparison of the common complexities, from fastest to slowest:
 
