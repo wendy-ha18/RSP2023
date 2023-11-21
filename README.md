@@ -163,24 +163,20 @@ Graphs may contain cycles, so we may come to the same node again (the different 
 
 - Representations of Graph:
     - Adjacency Matrix: 
-    ![Alt text](Photo/image-11.png)
-
-        - Representing a graph as a matrix of boolean (0’s and 1’s).
+        -   Representing a graph as a matrix of boolean (0’s and 1’s).
         - Implementation: [Code Snippet](Implementation/GrapthWithAdjacencyMatrix.py)
         - Big O: 
             - Time: Insertion/ Deletion of an edge: O(1), O($n^2$) to display the adjacency matrix. 
             - Space: O($n^2$)
-
     - Adjacency List: 
         - An array of Lists is used to store edges between two vertices. The size of array is equal to the number of vertices (i.e, n). Each index in this array represents a specific vertex in the graph.
-        
-        ![Alt text](Photo/image-12.png)
-        
         - Implementation: [Code Snippet](Implementation/GraphWithAdjacencyList.py)
         - Big O: 
             - Time: O(|E| / |V|) , which may result in O($n^3$) complexity for dense graphs to remove all edges.
             - Space: O(number of vertices).
 
+![Alt text](Photo/image-11.png)
+![Alt text](Photo/image-12.png)
 - Graph Traversal
     - Breadth-First Search (using Queue): 
         - For each node, first, the node is visited and then it’s child nodes are put in a FIFO queue. Then again the first node is popped out and then it’s child nodes are put in a FIFO queue and repeat until queue becomes empty.
