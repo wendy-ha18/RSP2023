@@ -11,9 +11,11 @@ Big O notation is a way to describe the efficiency or complexity of an algorithm
 
 ## Time Complexity
 
-Big O notation only provides an upper bound on an algorithm's running time, and actual running times may be faster in practice.
+- Big-Oh (O) Notation describes the worst-case run time (asymptotic upper bound of an algorithm).
+- Big-Omega (Ω) Notation reveals the best-case run time (asymptotic lower bound of an algorithm).
+- Big-Theta (ϴ) Notation encapsulates the extremes and provides a tight and consistent range (average). But, is confined to matching time complexities.
 
-![Alt text](Photo/image-1.png)
+![Alt text](image.png)
 
 The following chart is a comparison of the common complexities, from fastest to slowest:
 
