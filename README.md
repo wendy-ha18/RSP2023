@@ -1,11 +1,3 @@
-# RSP2023
-- [1.0 Study books note](#)
-- [2.0 Algorithm Analysis Concepts](#)
-    * [Big O Notation](#)
-        * [Time Complexity](#)
-        * [Space Complexity](#)
-
-
 # Big O Notation
 Big O notation is a way to describe the efficiency or complexity of an algorithm. It provides a rough estimate of how long an algorithm will take to run, based on the size of the input data.
 
