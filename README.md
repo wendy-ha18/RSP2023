@@ -198,3 +198,16 @@ Graphs may contain cycles, so we may come to the same node again (the different 
         - Big O:
             - Time: O(V+E), where V is the number of nodes and E is the number of edges.
             - Space: O(V).
+
+- Shortest Paths in Graph
+    - Dijkstra’s shortest path algorithm
+        - Defination: 
+            - Dijkstra’s algorithm works on directed graphs, where nodes are connected with weighted non-negative edges. The algorithm finds the distance from a single source node to all other nodes in the graph.
+        - Application: It is essential for solving problems such as network routing and mapping.
+        - Process: 
+            - (1) Initialize the source node to take value 0 and all other nodes to ∞. Start with node 0 as the “current node.” 
+            - (2) Find all neighboring nodes and update their values to either the minimum of their value or the value of the current node plus its distance. Mark the node as finished.
+            - (3) Assign the minimum-valued unfinished node as the current node.
+            - (4) Repeat steps 2 and 3 until all nodes (or a specific node of interest) are finished.
+        - Big O:
+            - Time: O($V^2$) if the input graph is represented using adjacency matrix and O(E * log V) with adjacency list (because the help of a binary heap).
