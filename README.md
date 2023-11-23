@@ -214,7 +214,7 @@ T2   T3                           T3   T4
 - Red-Black Tree:
     - A Self-balanced binary search tree (maintain O(Log n) height) with one extra bit of storage per node: its color which can be either Red or Black.
     - Properties:
-    ![Alt text](image.png)
+    ![Alt text](Photo/image-15.png)
 
         1. Every node is either red or black.
         2. The root is black.
