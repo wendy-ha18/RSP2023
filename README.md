@@ -1,4 +1,4 @@
-# Big O Notation
+# Algorithmic complexity / Big-O / Asymptotic analysis
 Big O notation is a way to describe the efficiency or complexity of an algorithm. It provides a rough estimate of how long an algorithm will take to run, based on the size of the input data.
 
 ## Time Complexity
@@ -203,3 +203,45 @@ Graphs may contain cycles, so we may come to the same node again (the different 
             - (4) Repeat steps 2 and 3 until all nodes (or a specific node of interest) are finished.
         - Big O:
             - Time: O($V^2$) if the input graph is represented using adjacency matrix and O(E * log V) with adjacency list (because the help of a binary heap).
+
+- Minimum Spanning Tree (MST)
+    - Greedy Algorithm: 
+        - An approach for solving a problem by selecting the best option available at the moment. It picks the path that seems optimal at the moment without regard for the overall optimization of the solution that would be formed.
+        - Greedy Approach is not always correct.
+    - Spanning Tree:
+        - A subset of the edges of the graph that forms a tree (acyclic) where every node of the graph is a part of the tree.
+    - Minimum Spanning Tree (MST):
+        - A spanning tree that has the minimum weight among all the possible spanning trees.
+        - In MST: number of edges = (number of vertices - 1).
+    - Kruskal’s Minimum Spanning Tree (MST) Algorithm:
+        - Purpose: finding the minimum spanning tree from a connected, undirected graph.
+        - Process:
+            1. Sort all the edges in non-decreasing order of their weight. 
+            2. Pick the smallest edge. Check if it forms a cycle with the spanning tree formed so far (uses the <strong>Union-Find algorithm</strong> to detect cycles). If the cycle is not formed, include this edge. Else, discard it. 
+            3. Repeat step#2 until (number of edges included in the MST) equals to (V – 1), so the algorithm stops here.
+        - Big O:
+            - Time: O(E * logE) or O(E * logV) 
+                - Sorting of edges takes O(E * logE) time. 
+                - After sorting, we iterate through all edges and apply the find-union algorithm. The find and union operations can take at most O(logV) time.
+            - Space: O(V + E).
+- Union-Find/Disjoint Set Algorithm (Detect Cycle in a Graph):
+    - What is a Disjoint set data structure: Two sets are called disjoint sets if they don’t have any element in common, the intersection of sets is a null set.
+    - Operations on Disjoint Set Data Structures:
+        - Find: implemented by recursively traversing the parent array until we hit a node that is the parent of itself.
+        - Union: by Rank/Size and Path Compression.
+    - Big O:
+        - Time: O(n) for creating n single item sets
+        - Space: O(n).
+
+![Alt text](image-13.png)
+
+
+
+
+
+
+
+
+
+
+
