@@ -146,6 +146,8 @@ Inorder traversal: 4 2 5 1 3 6
 Preorder traversal: 1 2 4 5 3 6
 Postorder traversal: 4 5 2 6 3 1
 ```
+
+
 # Graph
 - Defination: 
 
@@ -155,7 +157,8 @@ Graphs may contain cycles, so we may come to the same node again (the different 
 
 - Representations of Graph:
     - Adjacency Matrix: 
-        -   Representing a graph as a matrix of boolean (0’s and 1’s).
+    ![Alt text](Photo/image-11.png)
+        * Representing a graph as a matrix of boolean (0’s and 1’s).
         - Implementation: [Code Snippet](Implementation/GrapthWithAdjacencyMatrix.py)
         - Big O: 
             - Time: Insertion/ Deletion of an edge: O(1), O($n^2$) to display the adjacency matrix. 
