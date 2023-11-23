@@ -233,7 +233,7 @@ Graphs may contain cycles, so we may come to the same node again (the different 
         - Time: O(n) for creating n single item sets
         - Space: O(n).
 
-![Alt text](image-13.png)
+![Alt text](Photo/image-13.png)
 
 
 
