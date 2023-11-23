@@ -147,6 +147,66 @@ Preorder traversal: 1 2 4 5 3 6
 Postorder traversal: 4 5 2 6 3 1
 ```
 
+- Balanced Binary Tree:
+    - Defination: 
+    ![Alt text](Photo/image-14.png)
+        - A binary tree is balanced if the height of the tree is O(Log n), or in another way, the height of the left and right tree for any node does not differ by more than 1. 
+        - The left subtree of that node is also balanced.
+        - The right subtree of that node is also balanced.
+    - Application of Balanced Binary Tree:
+        - AVL Trees (inventors Adelson, Velskii, and Landis):
+            - AVL tree maintains O(Log n) height by making sure that the difference between the heights of the left and right subtrees cannot be more than 1. This difference is called the "balance factor" (= left subtree height – right subtree height).
+            - Process:
+                1. Perform the normal BST insertion. 
+                2. The current node must be one of the ancestors of the newly inserted node. Update the height of the current node. 
+                3. Get the balance factor (left subtree height – right subtree height) of the current node. 
+                    - If the balance factor is greater than 1, then the current node is unbalanced and we are either in the Left Left case or left Right case. To check whether it is left left case or not, compare the newly inserted key with the key in the left subtree root. 
+                    - If the balance factor is less than -1, then the current node is unbalanced and we are either in the Right Right case or Right-Left case. To check whether it is the Right Right case or not, compare the newly inserted key with the key in the right subtree root.    
+            - Re-balance: 
+                - z be the first unbalanced node, y be the child of z that comes on the path from w to z and x be the grandchild of z that comes on the path from w to z. 
+```
+1. Left Left Case:
+
+T1, T2, T3 and T4 are subtrees.
+         z                                      y 
+        / \                                   /   \
+       y   T4      Right Rotate (z)          x      z
+      / \          - - - - - - - - ->      /  \    /  \ 
+     x   T3                               T1  T2  T3  T4
+    / \
+  T1   T2
+                
+2. Left Right Case:
+
+     z                               z                           x
+    / \                            /   \                        /  \ 
+   y   T4  Left Rotate (y)        x    T4  Right Rotate(z)    y      z
+  / \      - - - - - - - - ->    /  \      - - - - - - - ->  / \    / \
+T1   x                          y    T3                    T1  T2 T3  T4
+    / \                        / \
+  T2   T3                    T1   T2
+
+3. Right Right Case:
+
+  z                                y
+ /  \                            /   \ 
+T1   y     Left Rotate(z)       z      x
+    /  \   - - - - - - - ->    / \    / \
+   T2   x                     T1  T2 T3  T4
+       / \
+     T3  T4
+
+4. Right Left Case:
+
+   z                            z                            x
+  / \                          / \                          /  \ 
+T1   y   Right Rotate (y)    T1   x      Left Rotate(z)   z      y
+    / \  - - - - - - - - ->     /  \   - - - - - - - ->  / \    / \
+   x   T4                      T2   y                  T1  T2  T3  T4
+  / \                              /  \
+T2   T3                           T3   T4         
+```
+
 
 # Graph
 - Defination: 
@@ -157,7 +217,6 @@ Graphs may contain cycles, so we may come to the same node again (the different 
 
 - Representations of Graph:
     - Adjacency Matrix: 
-    ![Alt text](Photo/image-11.png)
         * Representing a graph as a matrix of boolean (0’s and 1’s).
         - Implementation: [Code Snippet](Implementation/GrapthWithAdjacencyMatrix.py)
         - Big O: 
