@@ -1,11 +1,11 @@
 # Algorithmic complexity / Big-O / Asymptotic analysis
-Big O notation is a way to describe the efficiency or complexity of an algorithm. It provides a rough estimate of how long an algorithm will take to run, based on the size of the input data.
+Big O notation is a way to describe the efficiency or complexity of an algorithm. It provides a rough estimate of how long an algorithm will take to run, based on the size of the input data
 
 ## Time Complexity
 
 - Big-Oh (O) Notation describes the worst-case run time (asymptotic upper bound of an algorithm).
 - Big-Omega (Ω) Notation reveals the best-case run time (asymptotic lower bound of an algorithm).
-- Big-Theta (ϴ) Notation encapsulates the extremes and provides a tight and consistent range (average). But, is confined to matching time complexities.
+- Big-Theta (ϴ) Notation encapsulates the extremes and provides a tight and consistent range (average). But, is confined to matching time complexities
 
 ![Alt text](Photo/image-10.png)
 
